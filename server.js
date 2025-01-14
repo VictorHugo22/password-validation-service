@@ -13,6 +13,9 @@ app.use(cors({
     methods: ['GET', 'POST'], // Métodos HTTP permitidos
 }));
 
+// Manejar solicitudes preflight para CORS
+app.options('/validate-password', cors()); 
+
 // Middleware para analizar solicitudes JSON
 app.use(bodyParser.json());
 
