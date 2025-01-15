@@ -9,7 +9,8 @@ const PORT = 3001;
 
 // Middleware para habilitar CORS
 app.use(cors({
-    origin: 'https://login-cfd7.onrender.com', // Permitir solicitudes desde este dominio
+    origin: '*', // Permitir solicitudes desde este dominio
+    optionsSuccessStatus: 200,
     methods: ['GET', 'POST'], // Métodos HTTP permitidos
 }));
 
